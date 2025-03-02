@@ -26,9 +26,10 @@
     </main>
     <script>
       $(document).ready(() => {
-        const name = "refalol jlk"; 
-        const sender = "chichichichi"; 
-        
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name") 
+        const sender = params.get("sender") 
+
         $("#name").text(name);
 
         let isRepositioned = false;
@@ -93,3 +94,4 @@
     </script>
   </body>
 </html>
+  
