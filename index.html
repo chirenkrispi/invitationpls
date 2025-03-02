@@ -26,11 +26,9 @@
     </main>
     <script>
       $(document).ready(() => {
-        const params = new URLSearchParams(window.location.search);
-        const name = params.get("name") 
-        const sender = params.get("sender") 
-
-        $("#name").text(name);
+        const name = new URLSearchParams(window.location.search).get("name");
+        const sender = new URLSearchParams(window.location.search).get("sender");
+        $("#name").text(name ? " " + name : "");
 
         let isRepositioned = false;
 
